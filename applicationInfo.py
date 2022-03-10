@@ -22,7 +22,7 @@ for row in cur:
     server_name = row[6]
     ip_address = row[7]
     tech_stack = row[8]
-print(f"Application name:{row[0]} \n Business Categorization:{row[1]} \n Business Unit {row[2]} \n Employee ID: {row[3]} \n Employees Name: {row[4]} \n Programming Language: {row[5]} \n Server Name:{row[6]} \n IP Address:{row[7]} \n Technology Stack:{row[8]} ")
+print(f"Application name:{row[0]} \n Business Categorization:{row[1]} \n Data Classification: {row[2]} \n Employee ID: {row[3]} \n Employees Name: {row[4]} \n Programming Language: {row[5]} \n Server Name:{row[6]} \n IP Address:{row[7]} \n Technology Stack:{row[8]} ")
 
 cur.close()
 conn.close()
