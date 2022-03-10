@@ -6,7 +6,7 @@ cur = conn.cursor()
 print("Enter an application ID")
 application_id = int(input())
 cur.execute("""
-    SELECT applications.application_name, applications.business_categorization, applications.business_unit, employees.employee_id, employees.employees_name, employees.programming_lang, servers.server_name, servers.ip_address, servers.tech_stack
+    SELECT applications.application_name, applications.business_categorization, applications.data_classification, employees.employee_id, 'employees.employees_name', employees.programming_lang, servers.server_name, servers.ip_address, servers.tech_stack
     FROM applications, employees, servers
     WHERE application.application_id=employees.application_id
         AND employees.employees_id=servers.employee_id

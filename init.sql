@@ -7,7 +7,7 @@ CREATE TABLE applications (
   application_id              INTEGER NOT NULL,
   application_name            VARCHAR(128) NOT NULL,
   business_categorization     VARCHAR(128) NOT NULL,
-  business_unit               VARCHAR(128) NOT NULL,
+  data_classification         VARCHAR(128) NOT NULL,
   PRIMARY KEY     ( application_id )
 );
 
@@ -34,9 +34,9 @@ CREATE TABLE servers (
 
 GRANT ALL PRIVILEGES ON applications, employees, servers TO app_inventory;
 
-INSERT INTO applications VALUES (0, 'Payroll', 'Silver', 'HR');
-INSERT INTO applications VALUES (1, 'Help Desk', 'Gold', 'IT');
-INSERT INTO applications VALUES (2, 'Company Site', 'Gold', 'IT');
+INSERT INTO applications VALUES (0, 'Payroll', 'Silver', 'sensitive');
+INSERT INTO applications VALUES (1, 'Help Desk', 'Gold', 'private');
+INSERT INTO applications VALUES (2, 'Company Site', 'Gold', 'public');
 INSERT INTO employees VALUES (0, 0, 'Lebron James', 'Python');
 INSERT INTO employees VALUES (1, 1, 'Steph Curry', 'PHP');
 INSERT INTO employees VALUES (2, 2, 'Joel Embiid', 'HTML');
